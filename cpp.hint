@@ -1,0 +1,2 @@
+#define AWKNCORE_API __declspec(dllexport)
+#define AWKNCORE_API __declspec(dllimport)
