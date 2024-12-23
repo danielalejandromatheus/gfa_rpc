@@ -345,12 +345,8 @@ CharData getCharData(HANDLE hProcess, DWORD gameBaseAddress) {
 		if (classData != classDictionary.end()) strcpy_s(charData.className, sizeof(charData.className), classData->className.data());
 	}
 	char buffer[255] = { 0 };
-	if (charData.zoneNode) sprintf_s(buffer, "http://167.88.46.77/node-image/%d", charData.zoneNode);
+	if (charData.zoneNode) sprintf_s(buffer, "http://gfawakening.online:8080/node-image/%d", charData.zoneNode);
 	strcpy_s(charData.zoneUrl, sizeof(charData.zoneUrl), buffer);
-    if (charData.zoneNode) {
-        sprintf_s(buffer, "http://167.88.46.77/node-image/%d", charData.zoneNode);
-    }
-    strcpy_s(charData.zoneUrl, sizeof(charData.zoneUrl), buffer);
 	std::string classKey = "c-" + std::to_string(charData.classNode);
 	strcpy_s(charData.classKey, sizeof(charData.classKey), &classKey[0]);
 	std::ostringstream imgTextStream;
